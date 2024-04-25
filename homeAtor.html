@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="module" src="./js/menu.js" defer></script>
+    <link rel="stylesheet" href="./css/menu.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>ACME</title>
+</head>
+<body class="
+bg-gradient-to-r 
+bg-cover 
+bg-no-repeat
+bg-fixed 
+bg-gradient-to-r from-violet-950 ... 
+  ">
+
+  <div class="bg-violet-950 w-[1750px] h-[800px]  top-[60px] left-[80px] drop-shadow-md fixed">
+
+    <header>
+
+        <div class="fixed ml-[70px] mt-[20px]">
+            <img src="img/Logo-acme.png" alt="Acme Filmes">
+        </div>
+        <div class="fixed ml-[1600px] mt-[20px]">
+            <img src="img/icone-usuarrio.png" alt="Acme Filmes">
+        </div>
+
+    </header>
+
+    <main>
+        <h1 class="text-gray-50 font-sans text-xl text-center bg-violet-900 w-[76px] ml-[60px] mt-[160px]">Atores</h1>
+
+        <div class="menu">
+            <ul class="mt-[130px]"> ☰
+                <li><span class="material-symbols-outlined"> <a href="./home.html"> Filme</a></span></li>
+                <li><span class="material-symbols-outlined"> <a href="./homeGenero.html"> Gênero</a></span></li>
+                <li><span class="material-symbols-outlined"> <a href="./homeAtor.html"> Ator</a> </span></li>
+                <li><span class="material-symbols-outlined"> <a href="./homeDiretor.html"> Diretor</a></span></li>
+                <li><span class="material-symbols-outlined"> <a href="./homeClassificacao.html"> Classificação</a></span></li>
+            </ul>
+            </div>
+
+        <button class="fixed left-[90%] top-[160px] bg-violet-900 p-2 text-center text-gray-50 flex items-center transform hover:scale-105 duration-300" id="add">
+            <a class=' bx bx-plus font-bold text-center' href="../telaCadastrar/cadastro.html" > + add ator</a>
+        </button>
+
+        <div class="bg-gray-300 w-[1610px] h-[40px]  top-[210px] left-[60px] drop-shadow-md fixed flex align-center "> 
+            <h1 class="text-black font-normal ml-[20px] font-sans text-xl pr-[300px]" >ID</h1>
+            <div class="text-black font-normal font-sans  text-xl pr-[300px]">Filme</div>
+            <div class="text-black font-normal font-sans  text-xl pr-[300px]">Deletar</div>
+            <div class="text-black font-normal font-sans  text-xl">Atualizar</div>
+        </div>
+
+
+
+        <div class="bg-gray-300 w-[1610px] h-[40px]  top-[260px] left-[60px] drop-shadow-md fixed flex align-center "> 
+            <div class="overflow-y-auto w-9/12 h-4/6 mt-[200px]">
+            <div class="flex flex-col gap-10 overflow-scoll items-center" id="pai"></div>
+        </div>
+        </div>
+
+
+
+    </main>
+
+
+
+    
+</body>
+</html>
