@@ -54,3 +54,36 @@ export async function deletefilme (id) {
    return response.ok
 }
 
+export async function getAtor(){
+   const url = 'http://localhost:8080/v2/acmefilmes/ator'
+   const response = await fetch(url)
+   const data = await response.json()
+
+   data.ator
+}
+
+export async function getDiretor(){
+   const url = 'http://localhost:8080/v2/acmefilmes/diretor'
+   const response = await fetch(url)
+   const data = await response.json()
+
+   data.diretor
+}
+
+
+export async function getGenero(){
+   const url = 'http://localhost:8080/v2/acmefilmes/genero'
+   const response = await fetch(url)
+   const data = await response.json()
+
+   data.genero
+}
+
+export async function getClassificacao(){
+   const url = 'http://localhost:8080/v2/acmefilmes/classificacoes'
+   const response = await fetch(url)
+   const data = await response.json()
+
+   data.classificacao
+}
+

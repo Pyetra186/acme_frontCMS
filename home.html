@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script type="module" src="./js/menu.js" defer></script>
+    <script src="./js/home.js" defer></script>
     <link rel="stylesheet" href="./css/menu.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <title>ACME</title>
@@ -30,10 +31,10 @@ bg-gradient-to-r from-violet-950 ...
     </header>
 
     <main>
-        <h1 class="text-gray-50 font-sans text-xl text-center bg-violet-900 w-[76px] ml-[60px] mt-[160px]">Filmes</h1>
+        <h1 class="text-gray-50 font-sans text-xl text-center bg-violet-900 w-[76px] ml-[60px] mt-[140px]">Filmes</h1>
 
         <div class="menu">
-            <ul class="mt-[130px]"> ☰
+            <ul class="mt-[110px]"> ☰
                 <li><span class="material-symbols-outlined"> <a href="./home.html"> Filme</a></span></li>
                 <li><span class="material-symbols-outlined"> <a href="./homeGenero.html"> Gênero</a></span></li>
                 <li><span class="material-symbols-outlined"> <a href="./homeAtor.html"> Ator</a> </span></li>
@@ -42,24 +43,27 @@ bg-gradient-to-r from-violet-950 ...
             </ul>
             </div>
 
-        <button class="fixed left-[85%] top-[160px] bg-violet-900 p-2 text-center text-gray-50 flex items-center transform hover:scale-105 duration-300" id="add">
+        <button class="fixed left-[85%] top-[140px] bg-violet-900 p-2 text-center text-gray-50 flex items-center transform hover:scale-105 duration-300" id="add">
             <a class=' bx bx-plus font-bold text-center' href="./cadastroHome.html" > + add filme</a>
         </button>
 
-        <div class="bg-gray-300 w-[1610px] h-[40px]  top-[210px] left-[60px] drop-shadow-md fixed flex align-center "> 
-            <h1 class="text-black font-normal ml-[20px] font-sans text-xl pr-[300px]" >ID</h1>
-            <div class="text-black font-normal font-sans  text-xl pr-[300px]">Filme</div>
-            <div class="text-black font-normal font-sans  text-xl pr-[300px]">Deletar</div>
-            <div class="text-black font-normal font-sans  text-xl">Atualizar</div>
-        </div>
 
+        <div class="tabela ml-32 mr-80 mt-10 bg-gray-300 rounded-sm items-center">
+            <table class="table-fixed border-collapse rounded-lg">
+                <thead class="border-b ">
+                    <tr>
+                        <th class="px-16 py-2 rounded-tl-lg">ID</th>
+                        <th class="px-16 py-2">Filme</th>
+                        <th class="px-16 py-2">Preço</th>
+                        <th class="px-16 py-2">Duração</th>
+                        <th class="px-16 py-2">Atualizar</th>
+                        <th class="px-16 py-2 ">Excluir</th>
+                    </tr>
+                </thead>
+                <tbody id="tbl_filme" class="divide-y bg-violet-900">
 
+      
 
-        <div class="bg-gray-300 w-[1610px] h-[40px]  top-[260px] left-[60px] drop-shadow-md fixed flex align-center "> 
-            <div class="overflow-y-auto w-9/12 h-4/6 mt-[200px]">
-            <div class="flex flex-col gap-10 overflow-scoll items-center" id="pai"></div>
-        </div>
-        </div>
 
 
 

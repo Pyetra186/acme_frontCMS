@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="./output.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script type="module" src="./js/cadastro.js" defer></script>
+    <title>ACME login</title>
+</head>
+<body class="
+bg-gradient-to-r 
+bg-cover 
+bg-no-repeat
+bg-fixed 
+bg-gradient-to-r from-violet-950 ... 
+  ">">
+
+  <main>
+   
+    
+    <div class="bg-violet-950 w-[480px] h-[760px]  top-[70px] left-[718px] drop-shadow-md fixed">
+
+        <div class="fixed ml-[180px] mt-[20px]">
+            <img src="img/Logo-acme.png" alt="Acme Filmes">
+          </div>
+
+          <div class="mb-2 mt-[130px]">
+            <label for="nome" class=" block text-white ml-[50px] mb-2">nome:</label>
+            <input type="text" id="nome" name="nome"
+                class="w-[350px] border ml-[50px] text-gray-700 focus:outline-none focus:border-indigo-500">
+        </div>
+
+        <div class="mb-4 mt-[20px]">
+            <label for="data-lancamento" class="block text-white ml-[50px] mb-1">Data de Nascimento:</label>
+            <input type="date" id="dataLancamento" name="dataLancamento"
+                class="w-[350px] border ml-[50px] text-gray-700 focus:outline-none focus:border-indigo-500">
+        </div>
+
+        
+        <div class="mb-2">
+            <label for="data-relancamento" class=" text-white ml-[50px]  mb-1">Data de Falecimento:</label>
+            <input type="date" id="dataRelancamento" name="dataRelancamento"
+                class="w-[350px] border ml-[50px] text-gray-700 focus:outline-none focus:border-indigo-500">
+        </div>
+
+        <div class="mb-1 mt-[20px]">
+            <label for="sinopse" class="block text-white ml-[50px]  mb-1">Biografia:</label>
+            <input type="text" id="nome" name="nome"
+                class="w-[350px] border ml-[50px] text-gray-700 focus:outline-none focus:border-indigo-500">
+          
+        </div>
+
+        <div class="mb-4 mt-[20px]">
+            <label for='capa' class="block text-white text-sm ml-[50px]  mb-1" for="image-link">
+              Link da Imagem:
+            </label>
+            <input class="w-[350px] border ml-[50px] text-gray-700 focus:outline-none focus:border-indigo-500" id="capa" name="poster" type="text">
+          </div>
+
+        <div class="mb-4 mt-[20px]">
+            <label for="duracao" class="block text-white ml-[50px] mb-1">Sexo:</label>
+            <input type="text" id="duracao" name="duracao"
+                class="w-[350px] border ml-[50px] text-gray-700 focus:outline-none focus:border-indigo-500">
+        </div>
+
+        <div>
+            <button id="cadastro" type="submit" class="fixed z-[1] bg-violet-900  text-white left-[20%] top-[85%] py-[8px] px-[90px] ">
+                <a class=' bx bx-plus  text-center' href="./home.html" > Cadastrar diretor</a>
+            </button>
+          </div>
+        
+        
+    </div>
+        
+  </main>
+    
+</body>
+</html>
