@@ -19,11 +19,11 @@ async function criarLinhaDiretor() {
         id.textContent = diretor.id
 
         const nome = document.createElement('td')
-        nome.classList.add('px-16')
+        nome.classList.add('px-16', 'text-gray-300')
         nome.textContent = diretor.nome
 
         const biografia = document.createElement('td')
-        biografia.classList.add('px-16')
+        biografia.classList.add('px-16', 'text-gray-300')
         biografia.textContent = diretor.biografia
 
         const atualizar = document.createElement('td')

@@ -82,7 +82,7 @@ async function criarLinhaFilme() {
         id.textContent = filme.id
 
         const nome = document.createElement('td')
-        nome.classList.add('px-16')
+        nome.classList.add('px-16', 'text-gray-300')
         nome.textContent = filme.nome
 
         const preco = document.createElement('td')
@@ -90,7 +90,7 @@ async function criarLinhaFilme() {
         preco.textContent = Number(filme.valor_unitario).toFixed(2)
 
         const duracao = document.createElement('td')
-        duracao.classList.add('px-16')
+        duracao.classList.add('px-16', 'text-gray-300')
         duracao.textContent = filme.duracao
 
 
