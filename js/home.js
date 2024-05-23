@@ -96,11 +96,16 @@ async function criarLinhaFilme() {
 
         const editar = document.createElement('td')
         
-        const apagar = document.createElement('td')
+        const apagar = document.createElement('td', )
         const imgApagar = document.createElement('img')
-        imgApagar.src = '../img/deletar.png'
 
-        tr.replaceChildren(id, nome, preco, duracao,editar, apagar)
+        imgApagar.src = './img/deletar.png'
+        imgApagar.classList.add('bg-gray-300', 'items-center', 'mt-5', 'mr-60')
+
+
+
+        
+        tr.replaceChildren(id, nome, preco, duracao, editar, apagar, imgApagar)
         console.log(tr);
         tbl_filmes.append(tr)
     })
@@ -115,7 +120,8 @@ async function getFilmes() {
 }
 criarLinhaFilme()
 
-iconeDeletar.addEventListener('click', async () => {
-    deleteFilme(info.id_filme)
+
+imgApagar.addEventListener('click', async () => {
+    deleteFilme(id.filme)
     window.location.reload()
   })

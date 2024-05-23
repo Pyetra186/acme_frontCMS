@@ -17,7 +17,7 @@ export async function getFilme (id) {
 }
 
 export async function postfilme (filme) {
-   const url = 'http://localhost:8080/v2/acmefilmes/filme'
+   const url = 'http://localhost:8030/v2/acmefilmes/filme'
    const options = {
       method: 'POST',
       headers: {
@@ -84,6 +84,22 @@ export async function getDiretor(){
 }
 
 
+
+export async function getClassificacao(){
+   const url = 'http://localhost:8080/v2/acmefilmes/classificacoes'
+   const response = await fetch(url)
+   const data = await response.json()
+   
+   data.classificacao
+}
+
+
+
+
+
+
+
+
 export async function getGenero(){
    const url = 'http://localhost:8080/v2/acmefilmes/genero'
    const response = await fetch(url)
@@ -92,11 +108,58 @@ export async function getGenero(){
    data.genero
 }
 
-export async function getClassificacao(){
-   const url = 'http://localhost:8080/v2/acmefilmes/classificacoes'
-   const response = await fetch(url)
-   const data = await response.json()
 
-   data.classificacao
+export async function getGeneroId (id) {
+   const url = `http://localhost:8080/v2/acmefilmes/genero/${id}`
+   const response = await fetch(url)
+   const data= await response.json()
+
+   return data.genero[0]
 }
+
+export async function deleteGenero (id) {
+   
+   const url = `http://localhost:8080/v2/acmefilmes/genero/${id}`
+   const options = {
+      method: 'DELETE',
+   }
+   const response = await fetch (url, options)
+
+   return response.ok
+
+}
+
+
+export async function postGenero (genero) {
+   const url = 'http://localhost:8080/v2/acmefilmes/genero'
+   const options = {
+      method: 'POST',
+      headers: {
+         'Content-Type': 'application/json'
+      },
+      body: JSON.stringify (genero)
+   }
+   const response = await fetch (url, options)
+
+   return response.ok
+}
+
+
+export async function putGenero(id, genero) {
+  const url = `http://localhost:8080/v2/acmefilmes/genero/${id}`
+  const options = {
+   method: 'PUT',
+   headers:{
+      'Content-Type': 'application/json'
+   },
+   body:JSON.stringify(genero)
+  }
+
+  const response = await fetch(url, options)
+  return response.ok
+}
+
+
+
+
 

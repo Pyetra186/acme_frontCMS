@@ -1,5 +1,9 @@
 'use strict'
 
+import { deleteGenero } from "./filmes.js"
+
+
+
 const tbl_genero = document.getElementById('tbl_genero')
 
 
@@ -17,18 +21,36 @@ async function criarLinhaGenero() {
         id.textContent = genero.id
 
         const nome = document.createElement('td')
-        nome.classList.add('px-16')
+        nome.classList.add('px-16', 'text-gray-300')
         nome.textContent = genero.nome
 
         const atualizar = document.createElement('td')
-        
-        const apagar = document.createElement('td')
+      
+
+        const imgAtualizar = document.createElement('img')
+        imgAtualizar.src = './img/edit.svg'
+        imgAtualizar.classList.add('w-5', 'my-2', 'mr-[70px]',  )
+     
         const imgApagar = document.createElement('img')
         imgApagar.src = './img/deletar.png'
+        imgApagar.classList.add('items-center', 'my-2', 'mr-[20px]' ) 
 
-        tr.replaceChildren(id, nome, atualizar, apagar)
-        console.log(tr);
+        tr.replaceChildren(id, nome, atualizar, imgApagar, imgAtualizar)
         tbl_genero.append(tr)
+
+
+        imgAtualizar.addEventListener('click',()=>{
+            window.location.href='./editarGenero.html?id='+genero.id
+        })
+
+        imgApagar.addEventListener('click',()=>{
+            deleteGenero(genero.id)
+            window.location.reload()
+        })
+    
+        
+
+
     })
 }
 

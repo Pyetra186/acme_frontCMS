@@ -1,7 +1,8 @@
 'use strict'
 
+import { postfilme } from "./filmes.js"
 
-const titulo = document.getElementById('titulo')
+const titulo = document.getElementById('nome')
 const sinopse = document.getElementById('sinopse')
 const duracao = document.getElementById('duracao')
 const dataLancamento = document.getElementById('dataLancamento')
@@ -13,6 +14,7 @@ const cadastrar = document.getElementById('cadastrar')
 
 cadastrar.addEventListener('click' , async() => {
     
+    
     try {
         const tituloInput = titulo.value
         const sinopseIpunt = sinopse.value
@@ -20,7 +22,7 @@ cadastrar.addEventListener('click' , async() => {
         const dataLancamentoInput = dataLancamento.value
         const dataRelancamentoInput = dataRelancamento.value
         const valorInput = valor.value
-        const capaInput = capa.value
+        const capaInput = capa.src
         const classificacaoInput = classificacao.value
         const insert = {
             nome: tituloInput,
@@ -28,14 +30,15 @@ cadastrar.addEventListener('click' , async() => {
             duracao: duracaoInput,
             data_lancamento: dataLancamentoInput,
             data_relancamento: dataRelancamentoInput,
-            valor_unitario: valorInput,
             foto_capa: capaInput,
-            classificacao: classificacaoInput
+            valor_unitario: valorInput,
+            classificacao_id: classificacaoInput
             
             
         }
         
-        const cadastrar = await postFilme(insert)
+        cadastrar = await postfilme(insert)
+        console.log(insert);
         if(insert){
             window.location.href = './home.html'
         }
@@ -43,7 +46,7 @@ cadastrar.addEventListener('click' , async() => {
             alert("errooooo")
         }
     } catch (error) {
-        alert(error)
+        console.log(error)
     }
     
     

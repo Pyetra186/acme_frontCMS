@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script type="module" src="./js/menu.js" defer></script>
     <link rel="stylesheet" href="./css/menu.css">
-    <script src="./js/genero.js" defer></script>
+    <script src="./js/genero.js"  type="module" defer></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <title>ACME</title>
 </head>
@@ -43,14 +43,21 @@ bg-gradient-to-r from-violet-950 ...
             </ul>
             </div>
 
+            <button class="fixed left-[85%] top-[140px] bg-violet-900 p-2 text-center text-gray-50 flex items-center transform hover:scale-105 duration-300" id="add">
+                <a class=' bx bx-plus font-bold text-center' href="./cadastroGenero.html" > + add genero</a>
+            </button>
+    
+
        
         
-            <div class="tabela ml-32 mr-[1100px] mt-10 bg-gray-300 rounded-sm items-center">
+            <div class="tabela ml-32 mr-[1100px] w-[560px] mt-10 bg-gray-300 rounded-sm items-center">
                 <table class="table-fixed border-collapse rounded-lg">
                     <thead class="border-b ">
-                        <tr>
+                        <tr >
                             <th class="px-16 py-2 rounded-tl-lg">ID</th>
-                            <th class="px-16 py-2">Nome</th>
+                            <th class="px-6 py-2">Nome</th>
+                            <th class="px-6 py-2">Opções</th>
+                           
                         </tr>
                     </thead>
                     <tbody id="tbl_genero" class="divide-y bg-violet-900">

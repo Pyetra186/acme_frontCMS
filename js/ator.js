@@ -19,11 +19,11 @@ async function criarLinhaAtor() {
         id.textContent = ator.id
 
         const nome = document.createElement('td')
-        nome.classList.add('px-16')
+        nome.classList.add('px-16' , 'text-gray-300')
         nome.textContent = ator.nome
 
         const biografia = document.createElement('td')
-        biografia.classList.add('px-16')
+        biografia.classList.add('px-16', 'text-gray-300')
         biografia.textContent = ator.biografia
 
         const atualizar = document.createElement('td')

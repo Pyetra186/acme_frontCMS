@@ -23,7 +23,7 @@ async function criarLinhaClassificacao() {
        classificacaoo.textContent = classificacao.classificacaoo
 
         const caracteristicas = document.createElement('td')
-        caracteristicas.classList.add('px-16')
+        caracteristicas.classList.add('px-16', 'text-gray-300')
         caracteristicas.textContent = classificacao.caracteristicas
 
         const atualizar = document.createElement('td')
